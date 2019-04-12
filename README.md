@@ -69,6 +69,24 @@ export const Header = (props: HeaderProperties) => (
 );
 ```
 
+### Optional Webpack config
+
+If you want to keep the locale files organized by locale name in the webpack build, you can use [webpack-i18n-extractor-plugin](https://www.npmjs.com/package/webpack-i18n-extractor-plugin), as recommended in the dojo-webpack-plugin [doc](https://github.com/OpenNTF/dojo-webpack-plugin#related-plugins).
+
+```js
+// webpack.config.js
+// Not required, but can help keep locales organized
+plugins: [
+  new WebpackI18nExtractorPlugin({
+    output: {
+      filename: "[parentname]_nls-[lang].js",
+      chunkFilename: "[parentid]_nls-[lang].js"
+    }
+  }),
+  ...
+]
+```
+
 ## Usage
 
 This application is written in [TypeScript](http://www.typescriptlang.org/) and utilizes the [`@arcgis/webpack-plugin`](https://github.com/Esri/arcgis-webpack-plugin).
