@@ -79,6 +79,7 @@ module.exports = function(_, arg) {
     },
     plugins: [
       new CleanWebpackPlugin(),
+      // Not required, but can help keep locales organized
       new WebpackI18nExtractorPlugin({
         output: {
           filename: "[parentname]_nls-[lang].js",
