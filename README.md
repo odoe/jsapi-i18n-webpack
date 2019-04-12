@@ -53,10 +53,7 @@ define({
 
 // widgets/nls/es/Header.js
 define({
-  root: ({
-    label: "Hello"
-  }),
-  "es": 1
+  "label": "Hola"
 });
 ```
 
